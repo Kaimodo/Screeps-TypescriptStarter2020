@@ -1,0 +1,18 @@
+ c.say(taskToIcon(c.memory.task), true)
+
+ // Utility functions
+const taskToIcon = (t: CreepTask) => {
+  switch(t){
+    case T_WITHDRAW: return '💰'
+    case T_MINE: return '⛏️'
+    case T_IDLE: return '💤'
+    case T_REPAIR: return '🛠️'
+    case T_TRANSFER: return '📦'
+    case T_UPGRADE: return '👍'
+    case T_ATTACK: return '⚔️'
+    case T_RESERVE: return '🚀'
+    case T_CLAIM: return '⛳'
+    case T_RECYCLE: return '♻️'
+    default: return t
+  }
+}

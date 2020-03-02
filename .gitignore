@@ -14,6 +14,9 @@
 # TypeScript definitions installed by Typings
 /typings
 
+# Slack Config
+src/utils/slack/slack_config.ts
+
 # Screeps Config
 screeps.json
 

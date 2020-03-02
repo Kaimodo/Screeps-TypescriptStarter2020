@@ -24,3 +24,6 @@ export const MEMORY_VERSION = 1;
 
 // Room Name
 export const roomName = Game.spawns.Spawn1.room.name;
+
+// Slack
+export const ENABLE_SLACK = true;

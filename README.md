@@ -3,6 +3,9 @@
 # What me added:
 Screeps-Inscribe from ([resir014](https://github.com/resir014/screeps-inscribe))
 Screeps Typescript Profiler from ([Screepers](https://github.com/screepers/screeps-typescript-profiler))
+Traveler from ([Bonzaiferroni](https://github.com/bonzaiferroni/Traveler))
+
+Tryed to integrate Slack-Messages. It' won't work as for now. some error with XMLHttpRequest.
 
 ## Console Commands
   Commands are defined in Consolecommands.st

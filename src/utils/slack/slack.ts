@@ -10,9 +10,6 @@
 
 import * as SlackConfig from "./slack_config";
 
-// import * as XMLHttpRequest from "xmlhttprequest";
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
 import { ActionsEntity } from "./classes/ActionsEntity";
 import { AttachmentsEntity } from "./classes/AttachmentsEntity";
 import { Confirm } from "./classes/Confirm";

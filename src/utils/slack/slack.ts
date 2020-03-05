@@ -8,7 +8,11 @@
 // https://screeps.com/a/#!/room/shard1/E55S44
 // https://screeps.com/a/#!/sim/survival
 
+import * as Superagent from "superagent";
+
 import * as SlackConfig from "./slack_config";
+
+import * as superagent from "superagent";
 
 import { ActionsEntity } from "./classes/ActionsEntity";
 import { AttachmentsEntity } from "./classes/AttachmentsEntity";
@@ -23,12 +27,27 @@ export { FieldsEntity } from "./classes/FieldsEntity";
 export { Payload } from "./classes/Payload";
 
 export function postToSlack(payload: Payload): void {
-  let xmlhttp = new XMLHttpRequest();
   let webHookUrl: string = SlackConfig.SLACK_WEBHOOCK;
-  let myJSONStr = JSON.stringify(payload);
+  let myJSONStr: any = JSON.stringify(payload);
+  // let superagent = XMLHttpRequest(webHookUrl, myJSONStr);
+
+  /*
   xmlhttp.open("POST", webHookUrl, false);
   xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xmlhttp.send(myJSONStr);
+  */
+
+  superagent
+    .post(webHookUrl)
+    .set("Authorization", "...")
+    .accept("application/json")
+    .field(myJSONStr)
+    .then((result: any) => {
+      console.log("SLACK: " + myJSONStr);
+    })
+    .catch((err: Error) => {
+      throw err;
+    });
 }
 
 export function slacktest(payload: Payload): string {

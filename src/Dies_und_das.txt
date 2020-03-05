@@ -16,3 +16,18 @@ const taskToIcon = (t: CreepTask) => {
     default: return t
   }
 }
+
+// Slack TEST
+    if ((Game.time % 100 === 0 && Config.ENABLE_SLACK) ) {
+      let fieldHarvesters: Slack.FieldsEntity = new Slack.FieldsEntity("Harvesters", harvestersSize.toString(), true);
+      let fieldUpgraders: Slack.FieldsEntity = new Slack.FieldsEntity("Upgraders", upgradersSize.toString(), true);
+      let fieldSpawnValue = (room.energyAvailable + " / " + room.energyCapacityAvailable).toString();
+      let fieldSpawn: Slack.FieldsEntity = new Slack.FieldsEntity("Spawn Energy", fieldSpawnValue);
+      basicAttach.text = "CPU: limit: " + Game.cpu.limit + ", tickLimit: " + Game.cpu.tickLimit +
+      ", bucket: " + Game.cpu.bucket + ", used: " + Game.cpu.getUsed();
+      basicAttach.fields = [fieldHarvesters, fieldUpgraders, fieldSpawn];
+
+      let Testload: Slack.Payload = new Slack.Payload(SlackConfig.SLACK_USERNAME, [basicAttach]);
+
+      Slack.postToSlack(Testload);
+    }

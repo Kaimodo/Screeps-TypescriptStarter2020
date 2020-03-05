@@ -10,6 +10,12 @@ import * as Inscribe from "screeps-inscribe";
 
 import * as Traveler from "utils/traveler/traveler";
 
+import * as Harvester from "components/creeps/harvester";
+
+import * as Upgrader from "components/creeps/upgrader";
+
+import * as roomManager from "components/RoomManager";
+
 // import * as Slack from "utils/slack/slack";
 // import * as SlackConfig from "utils/slack/slack_config";
 
@@ -28,8 +34,26 @@ export const loop = ErrorMapper.wrapLoop(() => {
   for (const name in Memory.creeps) {
     if (!(name in Game.creeps)) {
       delete Memory.creeps[name];
+      console.log(`[${Inscribe.color("Clearing non-existing creep memory: " + name, "red")}]`);
     }
   }
 
+  function clearStaleCreepMemory() {
+    // Profiler.registerFN(clearStaleCreepMemory);
+
+    if (Game.time % 100 === 0) {
+      // log.info("Checking creep mem: " + Game.time);
+      for (const name in Memory.creeps) {
+        if (!Game.creeps[name]) {
+          console.log("Clearing non-existing creep memory:", name);
+          delete Memory.creeps[name];
+        }
+      }
+    }
+  }
+  _.each(Game.rooms, (room: Room) => {
+    roomManager.run(room);
+  });
+  clearStaleCreepMemory();
   utils.log_info();
 });

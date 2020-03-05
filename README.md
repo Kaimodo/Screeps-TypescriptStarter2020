@@ -1,10 +1,11 @@
 
 
 # What me added:
-Screeps-Inscribe from ([resir014](https://github.com/resir014/screeps-inscribe))
-Screeps Typescript Profiler from ([Screepers](https://github.com/screepers/screeps-typescript-profiler))
-Traveler from ([Bonzaiferroni](https://github.com/bonzaiferroni/Traveler))
-
+- Screeps-Inscribe from ([resir014](https://github.com/resir014/screeps-inscribe))
+- Screeps Typescript Profiler from ([Screepers](https://github.com/screepers/screeps-typescript-profiler))
+- Traveler from ([Bonzaiferroni](https://github.com/bonzaiferroni/Traveler))
+- Typescript Profiler (WiP) from ([Screepers](https://github.com/screepers/screeps-typescript-profiler))
+-
 Tryed to integrate Slack-Messages. It' won't work as for now. some error with XMLHttpRequest.
 
 ## Console Commands
@@ -15,6 +16,7 @@ Tryed to integrate Slack-Messages. It' won't work as for now. some error with XM
   ```
   in the Console.
 
+## Origin from here:
 # Screeps Typescript Starter
 
 Screeps Typescript Starter is a starting point for a Screeps AI written in Typescript. It provides everything you need to start writing your AI whilst leaving `main.ts` as empty as possible.

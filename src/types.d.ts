@@ -2,12 +2,8 @@
 
 // memory extension samples
 interface CreepMemory {
-  _trav: any;
-  _travel: any;
-  role: string;
-  room: string;
-  working: boolean;
-  avoid: any;
+  role: string | SpawnOptions;
+  upgrading: boolean;
 }
 
 interface Memory {

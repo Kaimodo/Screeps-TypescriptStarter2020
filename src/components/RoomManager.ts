@@ -40,7 +40,7 @@ function _loadCreeps(room: Room) {
 
   harvesters = _.filter(creeps, (Creep: Creep) => Creep.memory.role === "harvester");
   let harvestersSize = _.size(harvesters);
-  upgraders = _.filter(creeps, (Creep: Creep) => Creep.memory.role === "upgraders");
+  upgraders = _.filter(creeps, (Creep: Creep) => Creep.memory.role === "upgrader");
   let upgradersSize = _.size(upgraders);
 
   console.log(`[${Inscribe.color("Creeps found: " + creepCount, "blue")}]`);

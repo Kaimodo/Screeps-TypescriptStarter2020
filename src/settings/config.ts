@@ -27,3 +27,10 @@ export const roomName = Game.spawns.Spawn1.room.name;
 
 // Slack
 export const ENABLE_SLACK = true;
+
+//Debug Mode
+export const DEBUG_MODE: boolean = true;
+
+// Creep COunter
+export const MANAGER_MAX_HARVESTERS: number = 3;
+export const MANAGER_MAX_UPGRADERS: number = 3;

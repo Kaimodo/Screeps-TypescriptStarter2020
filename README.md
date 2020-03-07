@@ -8,6 +8,9 @@
 -
 Tryed to integrate Slack-Messages. It' won't work as for now. some error with XMLHttpRequest.
 
+# Actual working Code as of March 7th
+you can get ([THIS](https://github.com/Kaimodo/Screeps-TypescriptStarter2020/tree/7d682875d1c5f8c5b4d9b81a2a583969b02b0468))Commit
+
 ## Console Commands
   Commands are defined in Consolecommands.st
   Test if they work by typing in

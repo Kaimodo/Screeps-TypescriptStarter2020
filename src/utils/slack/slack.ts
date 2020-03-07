@@ -8,6 +8,8 @@
 // https://screeps.com/a/#!/room/shard1/E55S44
 // https://screeps.com/a/#!/sim/survival
 
+import * as asyncHooks from "async_hooks";
+
 import * as SlackConfig from "./slack_config";
 
 import { ActionsEntity } from "./classes/ActionsEntity";

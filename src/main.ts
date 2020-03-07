@@ -16,11 +16,15 @@ import * as Upgrader from "components/creeps/upgrader";
 
 import * as roomManager from "components/RoomManager";
 
-import * as Slack from "utils/slack/slack";
+/*
+import * as Slack from "utils/slack/slack2";
 import * as SlackConfig from "utils/slack/slack_config";
+
+import * as asyncHooks from "async_hooks";
 
 import { basicAttach } from "utils/slack/slack";
 
+*/
 // When compiling TS to JS and bundling with rollup, the line numbers and file names in error messages change
 // This utility uses source maps to get the line numbers and file names of the original, TS source code
 
@@ -56,7 +60,7 @@ export const loop = ErrorMapper.wrapLoop(() => {
   });
   clearStaleCreepMemory();
   // Slack TEST
-
+  /*
   if (Game.time % 100 === 0 && Config.ENABLE_SLACK) {
     let room: Room = Game.rooms[0];
     let fieldHarvesters: Slack.FieldsEntity = new Slack.FieldsEntity("Harvesters", "3", true);
@@ -78,6 +82,7 @@ export const loop = ErrorMapper.wrapLoop(() => {
 
     Slack.stest(Testload);
   }
+  */
 
   utils.log_info();
 });

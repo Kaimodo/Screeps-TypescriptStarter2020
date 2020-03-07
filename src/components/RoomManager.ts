@@ -5,11 +5,6 @@ import * as Upgrader from "components/creeps/upgrader";
 
 import * as Inscribe from "screeps-inscribe";
 
-// import * as Slack from "utils/slack/slack";
-// import * as SlackConfig from "utils/slack/slack_config";
-
-// import { basicAttach } from "utils/slack/slack";
-
 // import * as Profiler from "screeps-profiler";
 
 import * as M from "settings/memory";
@@ -115,7 +110,7 @@ function _spawnCreep(spawn: StructureSpawn, bodyParts: BodyPartConstant[], role:
     }
 
     status = spawn.createCreep(bodyParts, creepName, properties);
-    console.log(`[${Inscribe.color("Status: " + status, "red")}]`);
+    console.log(`[${Inscribe.color("Status: " + status, "#66ffcc")}]`);
 
     return _.isString(status) ? OK : status;
   } else {

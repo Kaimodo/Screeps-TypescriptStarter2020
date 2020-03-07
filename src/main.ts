@@ -76,7 +76,7 @@ export const loop = ErrorMapper.wrapLoop(() => {
 
     let Testload: Slack.Payload = new Slack.Payload(SlackConfig.SLACK_USERNAME, [basicAttach]);
 
-    Slack.postToSlack(Testload);
+    Slack.stest(Testload);
   }
 
   utils.log_info();

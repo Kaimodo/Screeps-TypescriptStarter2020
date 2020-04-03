@@ -60,10 +60,6 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "acorn": "^7.0.0",
-    "@slack/events-api": "^2.3.2",
-    "@slack/web-api": "^5.8.0",
-    "@slack/interactive-messages": "^1.5.0",
     "@types/screeps-profiler": "^1.2.2",
     "screeps-inscribe": "^0.2.0",
     "source-map": "~0.6.1",
